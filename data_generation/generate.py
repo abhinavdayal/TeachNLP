@@ -144,14 +144,23 @@ class ForwardPropagation:
         softmax_out = self.__softmax()
         caches = {}
         caches['inds'] = self.inds
-        caches['word_vec'] = self.word_vec
+        caches['word_vec'] = word_vec
         caches['W_LINEAR_DENSE'] = W_LINEAR_DENSE
         caches['Z'] = Z
 
         return softmax_out, caches
 
 class CostFunction:
-    pass
+
+    def __init__(self, softmax_out, Y) -> None:
+        """
+        Softmax output
+        """
+        self.softmax_out = softmax_out
+        self.Y = Y
+        m = self.softmax_out.shape[1]
+        cost = -(1/m) * np.sum(np.sum(self.Y * np.log(self.softmax_out + 0.001), axis = 0, keepdims = True), axis = 1)
+        return cost
 
 
 class BackPropagation:
