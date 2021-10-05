@@ -21,7 +21,7 @@ class NaiveBayes:
   fit(training_corpus: List[List[List[Text],Text]])
     fits the model with given training corpus
   predict_class(test_document : Text, smoothing: Text = None)
-    Takes a document(may be sentence or a paragraph) and predicts the class for that document.
+    Takes a document(can be sentence or a paragraph) and predicts the class for that document.
   """
 
   def __init__(self):
