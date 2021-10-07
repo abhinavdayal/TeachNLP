@@ -3,3 +3,4 @@ beautifulsoup4
 babel
 lingua
 chameleon
+pdoc3
