@@ -5,8 +5,13 @@ TEXT_FILES = "text_files" #Text files folder can be none if none represent it as
 
     
 class ReadData:
-
+    """
+    Read Data
+    """
     def readData(self) -> Text:
+        """
+        method
+        """
         text_file_names = os.listdir(os.path.join(DATA_EXTRACTION, TEXT_FILES))
         text_str = ""
         for file_name in text_file_names:

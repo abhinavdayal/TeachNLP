@@ -2,7 +2,8 @@ import numpy as np
 from typing import Text, List, Any, Optional
 
 class NaiveBayes:
-  """A class to implement Naive Bayes Language model for classification tasks.
+  """
+  A class to implement Naive Bayes Language model for classification tasks.
   ...
 
   Attributes
@@ -31,7 +32,7 @@ class NaiveBayes:
     self.classes_word_count_dict = dict()
 
 
-  def fit(self, training_corpus: List[List[List[Text],Text]]) -> None:
+  def fit(self, training_corpus: List) -> None:
     """This function takes the trainig corpus and calculates the prior probabilities of each class 
     and counts the occurrence of every word in every possible class.
     Each training sample is document and corresponding class.
