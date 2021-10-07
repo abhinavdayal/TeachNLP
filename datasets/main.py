@@ -25,10 +25,15 @@ count = 0
 
 
 class Utilities:
-
+    """
+    Utilities
+    """
     #Deprecated
     @classmethod
     def getKey(cls, dict_of_stories: Dict, to_find: Text) -> Text:
+        """
+        get Key
+        """
         for key in dict_of_stories.keys():
             if to_find in dict_of_stories[key]:
                 return key[1:]
@@ -39,6 +44,9 @@ class ExtractDataFromURL:
     """
 
     def __init__(self, url) -> None:
+        """
+        init
+        """
         self.url = url
         self.request =  Request(self.url, headers = hdr)
         page = urlopen(self.request).read()
@@ -46,6 +54,9 @@ class ExtractDataFromURL:
     
 
     def getBeautified(self) -> BeautifulSoup:
+        """
+        getBeautified
+        """
         return self.Beautified
 
 
@@ -146,8 +157,14 @@ class AnalyzeData:
         return
 
 class Main:
+    """
+    MAIN Class
+    """
 
     def __init__(self) -> None:
+        """
+        empty constructor
+        """
         return
     
     def extractData(self) -> NoReturn:

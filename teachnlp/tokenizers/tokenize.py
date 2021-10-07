@@ -1,5 +1,5 @@
 from typing import Any, Dict, List, Optional, Text
-from read_data import DATA_EXTRACTION, ReadData
+from .read_data import DATA_EXTRACTION, ReadData
 import re
 import os
 import json

@@ -1,2 +1,5 @@
 numpy
-beautifulsoup4==4.10.0
+beautifulsoup4
+babel
+lingua
+chameleon
