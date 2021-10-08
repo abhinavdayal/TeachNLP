@@ -3,7 +3,7 @@ from typing import Text, List, Any, Optional
 
 class NaiveBayes:
   """
-  A class to implement Naive Bayes Language model for classification tasks.
+  A class to implement Naive Bayes Classifier.
   ...
 
   Attributes
@@ -33,17 +33,19 @@ class NaiveBayes:
 
 
   def fit(self, training_corpus: List) -> None:
-    """This function takes the trainig corpus and calculates the prior probabilities of each class 
+    """
+    This function takes the trainig corpus and calculates 
+    the prior probabilities of each class,  
     and counts the occurrence of every word in every possible class.
     Each training sample is document and corresponding class.
-    ...
 
     Parameters
     ----------
-    training_corpus : List[List[List[Text],Text]]
-      training corpus is list of trainng examples. 
-      Each example is [sentence,class]
-      sentence is a list of words.
+    training_corpus : List[List[List[Text], Text]]
+
+      * training corpus is list of training examples. 
+      * Each example is [document,class]
+      * document is a list of words.
     """
     class_count = {}
     for doc,cls in training_corpus: 

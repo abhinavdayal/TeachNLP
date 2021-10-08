@@ -1,7 +1,7 @@
 import random
 from typing import List, Optional, Text
 
-class N_gram:
+class NGram:
 
     """
     * A class used used to represent n-gram language model for sentence generation.
@@ -116,7 +116,7 @@ class N_gram:
     def predict_next_word(self, seed: Optional[List[Text]] = []) -> Text:
 
         """
-        Predict the next word for n-gram model, given the seed words
+        Predict the next word for n-gram model, given the seed tokens
 
         Parameters
         ----------
