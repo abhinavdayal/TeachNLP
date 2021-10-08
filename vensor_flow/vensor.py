@@ -1,5 +1,5 @@
 import numpy as np
-from computation_graph import ComputationGraph
+from .computation_graph import ComputationGraph
 """
 Creating new data structure.... It should support gradients passing and computation graph
 """
