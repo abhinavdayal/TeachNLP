@@ -46,17 +46,8 @@ class Vensor:
     def backward(self):
         ComputationGraph.backward(np.array([1]),self)
     
-v1 = Vensor([1], requires_grad=True)
-v2 = Vensor([2], requires_grad=True)
-v3 = v1+v2
-print(v1.grad,v2.grad)
-v3.backward()
-print(v1.grad,v2.grad,v3.grad)
-
-v1 = Vensor([4], requires_grad=True)
-v2 = Vensor([2], requires_grad=True)
-v3 = v1*v2
-print(v1.grad, v2.grad)
-v3.backward()
-print(v1.grad, v2.grad, v3.grad)
+    def sum(self):
+        res = Vensor(np.sum(self.data))
+        ComputationGraph.add(res, self, np.ones_like(self.data))
+        return res 
 
