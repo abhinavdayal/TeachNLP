@@ -1,2 +1,1 @@
-from . import vensor
-from . import computation_graph
+from .vensor import Vensor
