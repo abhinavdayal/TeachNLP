@@ -72,10 +72,11 @@ class Vensor:
 
 
 
-
+'''
 v1 = Vensor([[1, 2, 3],[3,6,7]], requires_grad=True)
 v2 = Vensor([[3, 5, 6],[5,8,2]], requires_grad=True)
 v3 = (v1+v2)*3
 v4 = v3.sum()
 v4.backward()
-print(v1.grad,v2.grad)
+print(v1.grad,v2.grad) 
+'''
